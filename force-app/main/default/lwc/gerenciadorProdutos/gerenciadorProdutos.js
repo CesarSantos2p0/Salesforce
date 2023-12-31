@@ -9,4 +9,10 @@ export default class GerenciadorProdutos extends LightningElement {
             this.produtos = resultado;
         })
     }
+    
+    atualizarLista(){
+        buscarProdutos().then(resultado =>{
+            this.produtos = resultado;
+        })
+    }
 }
