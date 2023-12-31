@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Produtos">
+        <template for:each={produtos} for:item="produto">
+            <c-produto key={produto.Id} produto={produto}></c-produto>
+        </template>
+    </lightning-card>
+</template>

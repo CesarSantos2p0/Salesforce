@@ -1,0 +1,22 @@
+<template>
+    <lightning-card if:true={produto} title={produto.Name}>
+        <lightning-button label="editar" slot="actions"></lightning-button>
+        <lightning-button onclick={apagarProduto} label="apagar" slot="actions"></lightning-button>
+
+        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+            <div class="slds-col">
+              <span class="slds-text-title slds-is-static">Codigo do produto:</span> </br>
+              <span>{produto.ProductCode}</span>
+            </div>
+            <div class="slds-col">
+              <span class="slds-text-title slds-is-static">Descrição do produto:</span> </br>
+              <span>{produto.Description}</span>
+            </div>
+            <div class="slds-col">
+              <span class="slds-text-title slds-is-static">Preço do produto:</span> </br>
+              <span if:true={produto.PrecoProduto__c}>R$ <lightning-formatted-number value={produto.PrecoProduto__c}></lightning-formatted-number></span>
+            </div>
+        </div>
+
+    </lightning-card>
+</template>
