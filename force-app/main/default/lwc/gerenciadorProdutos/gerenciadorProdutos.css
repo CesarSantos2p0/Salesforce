@@ -1,0 +1,5 @@
+.cor-fundo{
+    background-color: var(--lwc-colorBackground);
+    padding: 10px 10px 0.5px 10px;
+    margin-bottom: -10px;
+}
