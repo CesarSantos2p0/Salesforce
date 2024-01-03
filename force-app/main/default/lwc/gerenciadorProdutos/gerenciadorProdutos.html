@@ -1,6 +1,6 @@
 <template>
     <lightning-card title="Produtos">
-        <lightning-button label="Novo Produto" slot="actions"></lightning-button>
+        <lightning-button onclick={criarProduto} label="Novo Produto" slot="actions"></lightning-button>
 
         <template for:each={produtos} for:item="produto">
             <c-produto key={produto.Id} produto={produto} onatualizar={atualizarLista}></c-produto>
